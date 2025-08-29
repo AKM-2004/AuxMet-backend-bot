@@ -1,0 +1,172 @@
+2025-08-22 16:11:52 - mongodbconnection - INFO - MongoDB connected successfully
+2025-08-22 16:14:45 - mongodbconnection - INFO - MongoDB connected successfully
+2025-08-22 16:16:14 - mongodbconnection - INFO - MongoDB connected successfully
+2025-08-22 16:28:45 - mongoDbConnection - INFO - Connected successfully
+2025-08-22 16:29:01 - mongodbconnection - INFO - MongoDB connected successfully
+2025-08-22 16:30:30 - mongoDbConnection - INFO - Connected successfully
+2025-08-22 16:37:48 - mongodbconnection - ERROR - Error connecting to MongoDB: All nameservers failed to answer the query _mongodb._tcp.maincluster.iw1li1n.mongodb.net. IN SRV: Server Do53:192.168.1.1@53 answered REFUSED
+2025-08-22 16:38:40 - mongodbconnection - ERROR - Error connecting to MongoDB: The resolution lifetime expired after 21.197 seconds: Server Do53:192.168.1.1@53 answered The DNS operation timed out after 2.000 seconds; Server Do53:192.168.1.1@53 answered The DNS operation timed out after 2.000 seconds; Server Do53:192.168.1.1@53 answered The DNS operation timed out after 2.000 seconds; Server Do53:192.168.1.1@53 answered The DNS operation timed out after 1.999 seconds; Server Do53:192.168.1.1@53 answered The DNS operation timed out after 2.000 seconds; Server Do53:192.168.1.1@53 answered The DNS operation timed out after 2.000 seconds; Server Do53:192.168.1.1@53 answered The DNS operation timed out after 2.000 seconds
+2025-08-22 16:41:48 - mongodbconnection - INFO - MongoDB connected successfully
+2025-08-22 16:42:09 - mongodbconnection - INFO - MongoDB disconnected
+2025-08-22 16:42:09 - mongoDbConnection - INFO - Connected successfully
+2025-08-22 18:39:08 - mongodbconnection - INFO - MongoDB connected successfully
+2025-08-22 18:39:18 - mongoDbConnection - INFO - Connected successfully
+2025-08-22 18:39:53 - mongodbconnection - INFO - MongoDB connected successfully
+2025-08-22 18:55:58 - mongodbconnection - INFO - MongoDB disconnected
+2025-08-22 18:55:58 - mongoDbConnection - INFO - Connected successfully
+2025-08-22 18:56:36 - mongodbconnection - INFO - MongoDB connected successfully
+2025-08-22 19:04:12 - mongodbconnection - INFO - MongoDB disconnected
+2025-08-22 19:04:12 - mongoDbConnection - INFO - Connected successfully
+2025-08-22 19:05:02 - mongodbconnection - INFO - MongoDB connected successfully
+2025-08-22 19:17:36 - mongodbconnection - INFO - MongoDB disconnected
+2025-08-22 19:17:36 - mongoDbConnection - INFO - Connected successfully
+2025-08-22 19:17:55 - mongodbconnection - INFO - MongoDB connected successfully
+2025-08-22 19:25:06 - mongodbconnection - INFO - MongoDB disconnected
+2025-08-22 19:25:06 - mongoDbConnection - INFO - Connected successfully
+2025-08-22 19:25:34 - mongodbconnection - INFO - MongoDB connected successfully
+2025-08-22 19:26:58 - mongodbconnection - INFO - MongoDB disconnected
+2025-08-22 19:26:58 - mongoDbConnection - INFO - Connected successfully
+2025-08-22 19:30:08 - mongodbconnection - INFO - MongoDB connected successfully
+2025-08-22 19:35:00 - mongodbconnection - INFO - MongoDB disconnected
+2025-08-22 19:35:00 - mongoDbConnection - INFO - Connected successfully
+2025-08-22 19:35:14 - mongodbconnection - INFO - MongoDB connected successfully
+2025-08-22 19:36:16 - mongodbconnection - INFO - MongoDB disconnected
+2025-08-22 19:36:16 - mongoDbConnection - INFO - Connected successfully
+2025-08-22 19:36:29 - mongodbconnection - INFO - MongoDB connected successfully
+2025-08-22 19:37:54 - mongodbconnection - INFO - MongoDB disconnected
+2025-08-22 19:37:54 - mongoDbConnection - INFO - Connected successfully
+2025-08-22 19:38:07 - mongodbconnection - INFO - MongoDB connected successfully
+2025-08-22 19:41:32 - mongodbconnection - INFO - MongoDB disconnected
+2025-08-22 19:41:32 - mongoDbConnection - INFO - Connected successfully
+2025-08-22 19:41:45 - mongodbconnection - INFO - MongoDB connected successfully
+2025-08-22 19:49:31 - mongodbconnection - INFO - MongoDB disconnected
+2025-08-22 19:49:31 - mongoDbConnection - INFO - Connected successfully
+2025-08-22 19:49:43 - mongodbconnection - INFO - MongoDB connected successfully
+2025-08-22 19:51:13 - mongodbconnection - INFO - MongoDB disconnected
+2025-08-22 19:51:13 - mongoDbConnection - INFO - Connected successfully
+2025-08-22 19:51:24 - mongodbconnection - INFO - MongoDB connected successfully
+2025-08-22 19:59:21 - mongodbconnection - INFO - MongoDB disconnected
+2025-08-22 19:59:21 - mongoDbConnection - INFO - Connected successfully
+2025-08-22 19:59:38 - mongodbconnection - INFO - MongoDB connected successfully
+2025-08-22 20:02:44 - mongodbconnection - INFO - MongoDB disconnected
+2025-08-22 20:02:44 - mongoDbConnection - INFO - Connected successfully
+2025-08-22 20:04:14 - mongodbconnection - INFO - MongoDB connected successfully
+2025-08-22 20:09:05 - mongodbconnection - INFO - MongoDB disconnected
+2025-08-22 20:09:05 - mongoDbConnection - INFO - Connected successfully
+2025-08-22 20:09:20 - mongodbconnection - ERROR - Error connecting to MongoDB: object AsyncIOMotorClient can't be used in 'await' expression
+2025-08-22 20:10:40 - mongodbconnection - ERROR - Error connecting to MongoDB: object AsyncIOMotorClient can't be used in 'await' expression
+2025-08-22 20:11:15 - mongodbconnection - ERROR - Error connecting to MongoDB: object AsyncMongoClient can't be used in 'await' expression
+2025-08-22 20:12:50 - mongodbconnection - INFO - MongoDB connected successfully
+2025-08-22 20:13:50 - mongodbconnection - INFO - MongoDB disconnected
+2025-08-22 20:13:50 - mongoDbConnection - INFO - Connected successfully
+2025-08-22 20:14:02 - mongodbconnection - INFO - MongoDB connected successfully
+2025-08-22 20:16:41 - mongodbconnection - INFO - MongoDB disconnected
+2025-08-22 20:16:41 - mongoDbConnection - INFO - Connected successfully
+2025-08-22 20:17:00 - mongodbconnection - INFO - MongoDB connected successfully
+2025-08-22 20:22:01 - mongodbconnection - INFO - MongoDB disconnected
+2025-08-22 20:22:01 - mongoDbConnection - INFO - Connected successfully
+2025-08-22 20:22:15 - mongodbconnection - INFO - MongoDB connected successfully
+2025-08-22 20:24:15 - mongodbconnection - INFO - MongoDB disconnected
+2025-08-22 20:24:15 - mongoDbConnection - INFO - Connected successfully
+2025-08-22 20:24:27 - mongodbconnection - INFO - MongoDB connected successfully
+2025-08-22 20:26:23 - mongodbconnection - INFO - MongoDB disconnected
+2025-08-22 20:26:23 - mongoDbConnection - INFO - Connected successfully
+2025-08-22 20:26:35 - mongodbconnection - INFO - MongoDB connected successfully
+2025-08-22 20:29:16 - mongodbconnection - INFO - MongoDB disconnected
+2025-08-22 20:29:16 - mongoDbConnection - INFO - Connected successfully
+2025-08-22 20:29:28 - mongodbconnection - INFO - MongoDB connected successfully
+2025-08-22 20:34:59 - mongodbconnection - INFO - MongoDB disconnected
+2025-08-22 20:34:59 - mongoDbConnection - INFO - Connected successfully
+2025-08-22 20:35:10 - mongodbconnection - INFO - MongoDB connected successfully
+2025-08-22 20:36:14 - mongodbconnection - INFO - MongoDB disconnected
+2025-08-22 20:36:14 - mongoDbConnection - INFO - Connected successfully
+2025-08-22 20:38:50 - mongodbconnection - INFO - MongoDB connected successfully
+2025-08-22 20:40:27 - mongodbconnection - INFO - MongoDB disconnected
+2025-08-22 20:40:27 - mongoDbConnection - INFO - Connected successfully
+2025-08-22 20:40:43 - mongodbconnection - INFO - MongoDB connected successfully
+2025-08-22 20:53:31 - mongodbconnection - INFO - MongoDB disconnected
+2025-08-22 20:53:31 - mongoDbConnection - INFO - Connected successfully
+2025-08-22 20:53:43 - mongodbconnection - INFO - MongoDB connected successfully
+2025-08-22 20:54:39 - mongodbconnection - INFO - MongoDB disconnected
+2025-08-22 20:54:39 - mongoDbConnection - INFO - Connected successfully
+2025-08-22 20:54:50 - mongodbconnection - INFO - MongoDB connected successfully
+2025-08-22 20:55:45 - mongodbconnection - INFO - MongoDB disconnected
+2025-08-22 20:55:45 - mongoDbConnection - INFO - Connected successfully
+2025-08-22 22:23:18 - mongodbconnection - INFO - MongoDB connected successfully
+2025-08-22 22:33:18 - mongodbconnection - INFO - MongoDB disconnected
+2025-08-22 22:33:18 - mongoDbConnection - INFO - Connected successfully
+2025-08-22 22:33:30 - mongodbconnection - INFO - MongoDB connected successfully
+2025-08-22 22:35:08 - mongodbconnection - INFO - MongoDB disconnected
+2025-08-22 22:35:08 - mongoDbConnection - INFO - Connected successfully
+2025-08-22 22:35:30 - mongodbconnection - INFO - MongoDB connected successfully
+2025-08-22 22:36:35 - mongodbconnection - INFO - MongoDB disconnected
+2025-08-22 22:36:35 - mongoDbConnection - INFO - Connected successfully
+2025-08-22 22:36:49 - mongodbconnection - INFO - MongoDB connected successfully
+2025-08-22 22:42:19 - mongodbconnection - INFO - MongoDB disconnected
+2025-08-22 22:42:19 - mongoDbConnection - INFO - Connected successfully
+2025-08-22 22:42:30 - mongodbconnection - INFO - MongoDB connected successfully
+2025-08-22 22:43:56 - mongodbconnection - INFO - MongoDB disconnected
+2025-08-22 22:43:56 - mongoDbConnection - INFO - Connected successfully
+2025-08-22 22:45:24 - mongoDbConnection - INFO - Connected successfully
+2025-08-22 22:45:54 - mongodbconnection - INFO - MongoDB connected successfully
+2025-08-22 22:46:31 - mongodbconnection - INFO - MongoDB disconnected
+2025-08-22 22:46:41 - mongodbconnection - INFO - MongoDB connected successfully
+2025-08-22 22:51:10 - mongodbconnection - INFO - MongoDB disconnected
+2025-08-22 22:51:36 - mongoDbConnection - INFO - Connected successfully
+2025-08-22 23:12:56 - mongodbconnection - INFO - MongoDB connected successfully
+2025-08-22 23:13:54 - mongodbconnection - INFO - MongoDB disconnected
+2025-08-22 23:14:05 - mongodbconnection - INFO - MongoDB connected successfully
+2025-08-22 23:14:34 - mongodbconnection - INFO - MongoDB connected successfully
+2025-08-22 23:17:07 - mongodbconnection - INFO - MongoDB disconnected
+2025-08-22 23:17:18 - mongodbconnection - INFO - MongoDB connected successfully
+2025-08-22 23:18:07 - mongodbconnection - INFO - MongoDB connected successfully
+2025-08-22 23:18:30 - mongodbconnection - INFO - MongoDB connected successfully
+2025-08-22 23:18:54 - mongodbconnection - INFO - MongoDB connected successfully
+2025-08-22 23:20:22 - mongodbconnection - INFO - MongoDB disconnected
+2025-08-22 23:21:08 - mongoDbConnection - INFO - Connected successfully
+2025-08-22 23:22:08 - mongodbconnection - INFO - MongoDB connected successfully
+2025-08-22 23:23:02 - mongodbconnection - INFO - MongoDB disconnected
+2025-08-22 23:23:13 - mongodbconnection - INFO - MongoDB connected successfully
+2025-08-22 23:23:50 - mongodbconnection - INFO - MongoDB connected successfully
+2025-08-22 23:26:02 - mongodbconnection - INFO - MongoDB disconnected
+2025-08-22 23:26:28 - mongodbconnection - INFO - MongoDB connected successfully
+2025-08-22 23:31:12 - mongodbconnection - INFO - MongoDB disconnected
+2025-08-22 23:31:23 - mongodbconnection - INFO - MongoDB connected successfully
+2025-08-22 23:31:44 - mongodbconnection - INFO - MongoDB connected successfully
+2025-08-22 23:34:05 - mongodbconnection - INFO - MongoDB disconnected
+2025-08-22 23:34:23 - mongodbconnection - INFO - MongoDB connected successfully
+2025-08-22 23:34:52 - mongodbconnection - INFO - MongoDB disconnected
+2025-08-22 23:35:06 - mongodbconnection - INFO - MongoDB connected successfully
+2025-08-22 23:35:22 - mongodbconnection - INFO - MongoDB disconnected
+2025-08-22 23:35:57 - mongodbconnection - INFO - MongoDB connected successfully
+2025-08-22 23:36:48 - mongodbconnection - INFO - MongoDB disconnected
+2025-08-22 23:36:58 - mongodbconnection - INFO - MongoDB connected successfully
+2025-08-22 23:38:03 - mongodbconnection - INFO - MongoDB disconnected
+2025-08-22 23:38:27 - mongodbconnection - INFO - MongoDB connected successfully
+2025-08-22 23:39:47 - mongodbconnection - INFO - MongoDB disconnected
+2025-08-22 23:40:01 - mongodbconnection - INFO - MongoDB connected successfully
+2025-08-22 23:40:42 - mongodbconnection - INFO - MongoDB disconnected
+2025-08-22 23:40:56 - mongodbconnection - INFO - MongoDB connected successfully
+2025-08-22 23:41:54 - mongodbconnection - INFO - MongoDB disconnected
+2025-08-22 23:42:04 - mongodbconnection - INFO - MongoDB connected successfully
+2025-08-22 23:43:36 - mongodbconnection - INFO - MongoDB disconnected
+2025-08-22 23:43:50 - mongodbconnection - INFO - MongoDB connected successfully
+2025-08-22 23:44:32 - mongodbconnection - INFO - MongoDB disconnected
+2025-08-22 23:44:50 - mongodbconnection - INFO - MongoDB connected successfully
+2025-08-22 23:45:47 - mongodbconnection - INFO - MongoDB disconnected
+2025-08-22 23:45:57 - mongodbconnection - INFO - MongoDB connected successfully
+2025-08-22 23:46:09 - mongodbconnection - INFO - MongoDB disconnected
+2025-08-22 23:46:19 - mongodbconnection - INFO - MongoDB connected successfully
+2025-08-22 23:49:05 - mongodbconnection - INFO - MongoDB disconnected
+2025-08-22 23:49:18 - mongodbconnection - INFO - MongoDB connected successfully
+2025-08-22 23:49:38 - mongodbconnection - INFO - MongoDB connected successfully
+2025-08-22 23:49:58 - mongodbconnection - INFO - MongoDB connected successfully
+2025-08-22 23:51:26 - mongodbconnection - INFO - MongoDB disconnected
+2025-08-22 23:51:39 - mongodbconnection - INFO - MongoDB connected successfully
+2025-08-22 23:52:19 - mongodbconnection - INFO - MongoDB connected successfully
+2025-08-22 23:52:38 - mongodbconnection - INFO - MongoDB disconnected
+2025-08-22 23:52:51 - mongodbconnection - INFO - MongoDB connected successfully
+2025-08-22 23:54:31 - mongodbconnection - INFO - MongoDB disconnected
+2025-08-22 23:54:41 - mongodbconnection - INFO - MongoDB connected successfully
+2025-08-22 23:54:57 - mongodbconnection - INFO - MongoDB disconnected
+2025-08-22 23:55:08 - mongodbconnection - INFO - MongoDB connected successfully
