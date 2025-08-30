@@ -7,6 +7,9 @@ import jwt  ## change the JWT to jwt that is python pyjwt
 import os
 import asyncio
 import numpy as np
+from collections import defaultdict
+sid_state = defaultdict(lambda: {"question":None , "answer": ""})
+sid_locks = defaultdict(asyncio.Lock) 
 
 origins = os.getenv("BOTAPP_ORIGINS")
 if origins != "":
@@ -135,8 +138,7 @@ async def connect(sid, environ,auth):
         )  ## we will have to use middle ware
         print(sid_users,session_users)
         generated_question = await serverobj.generate_question(resume_data)
-        serverobj.current_message = {}
-        serverobj.currnet_message["question"] = generated_question
+        sid_state[sid]["question"] = generated_question
         print(generated_question.question)
         question = generated_question.question
         # generated_question -> tts then in raw form data will be send to the front-end
@@ -189,24 +191,23 @@ async def input_audio(sid, data):
     
             text_output = await serverobj.get_text_input(arr)
             print(text_output)
-            if not serverobj.currnet_message.get("answer"):
-                serverobj.currnet_message["answer"] = ""
-            serverobj.currnet_message["answer"] += text_output
-            print(serverobj.currnet_message["answer"])
+            if not sid_state[sid]["answer"]:
+                sid_state[sid]["answer"] = ""
+            sid_state[sid]["answer"] += text_output
+            print(sid_state[sid]["answer"])
             
 
         else:
             # now we have to store the value inside the redis
-            print(serverobj.currnet_message)
-            message = serverobj.currnet_message
-            if (not message) or (len(message) != 2):
+            if  not sid_state[sid]["question"] and not sid_state[sid]["answer"]:
                 raise ValueError("there not proper current_message")
-            await serverobj.add_question_list(message_turn=serverobj.currnet_message)
+            await serverobj.add_question_list(message_turn=sid_state[sid])
+            print(sid_state[sid])
             storage_task = asyncio.create_task( serverobj.store_message_to_mongodb( # this will run in the background will not interupt to the socket 
-                serverobj.currnet_message["question"],
-                serverobj.currnet_message["answer"],
+                sid_state[sid]["question"],
+                sid_state[sid]["answer"],
             ) )
-            serverobj.current_message = {}
+            sid_state[sid] = {"question":None,"answer":""}
 
             if serverobj.count_message % 10 == 0:
                 list_of_questions = serverobj.get_list_of_messages()
@@ -220,7 +221,7 @@ async def input_audio(sid, data):
                 raise ValueError("not able to fetch the resume data..")
             
             generated_question = await serverobj.generate_question(resume_data)
-            serverobj.currnet_message = {"question": generated_question}
+            sid_state[sid]["question"] =  generated_question
             question = generated_question.question
             # generated_question -> tts then in raw form data will be send to the front-end
             generated_audio_array = await serverobj.get_audio_output(question)
@@ -258,6 +259,7 @@ async def disconnect(sid, environ):
     # remove thesid from the sid_users
     if sid in sid_users:
         sid_users.pop(sid)
+        
     print(f"client dissconnected: {sid} and {sid_users}")
 
     #  from front end at every 5 sec till the user is taking that data will stream

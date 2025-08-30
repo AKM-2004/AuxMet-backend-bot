@@ -38,8 +38,8 @@ class server_chat:
         self.session_status = None
         self.user_id = None
         self.rd = redis_db()
-        client = get_mongodb_client()
-        self.client = client["auxmet_db"]
+        self.client = get_mongodb_client()
+        self.client = self.client["auxmet_db"]
         self.count_message = 0
         self.currnet_message = {}
 

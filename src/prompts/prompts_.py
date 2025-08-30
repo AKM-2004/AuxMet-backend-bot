@@ -83,6 +83,8 @@ Using any other value will cause an error.
 **Summary of the Candidate:**
 {summary}
 
+STRICLTY FOLLOW THE SCHEMA DON'T CHANGE THE OUPUT STRUCTURE 
+
 ---
 
 Always call the Output_ function with the appropriate parameters to generate your interview question.

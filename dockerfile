@@ -16,7 +16,7 @@ RUN pip install uv
 
 WORKDIR /app 
 
-COPY pyproject.toml ./  
+COPY pyproject.toml uv.lock ./  
 
 RUN uv sync  
 RUN apt-get -qq -y install espeak-ng > /dev/null 2>&1 
