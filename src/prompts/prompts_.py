@@ -175,7 +175,7 @@ You are an AI assistant that evaluates interview conversations. Analyze the conv
 7. Return the results in the exact JSON format above
 8. if the conversation data is empty then give all of the fields zero 
 9. if the answer is partially correct you can put it into the correct
-10. if the answe is more that 40 percent correct put it into the correct
+10. if the answe is more that 30 percent correct put it into the correct and under stand the question and understand the user answer.
 11. STRICLTY FOLLOW THE SCHEMA DON'T CHANGE THE OUPUT STRUCTURE 
 
 **CONVERSATION DATA:**
