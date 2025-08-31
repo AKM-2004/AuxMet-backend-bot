@@ -1,31 +1,48 @@
-# using the Nvida cuda base image 
-FROM python:3.11-slim
+# Use CUDA development image instead of runtime
+FROM nvidia/cuda:12.8.0-cudnn-devel-ubuntu22.04
 
-# LETS SET THE ENV 
+# Set environment variables in one layer
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    PIP_NO_CACHE_DIR=1 \
+    PIP_DISABLE_PIP_VERSION_CHECK=1 \
+    DEBIAN_FRONTEND=noninteractive
 
-ENV PYTHONUNBUFFERED=1 \
-    PYTHONDONTWRITEBYTECODE=1 \
-    PIP_NO_CACHE_DIR=1
+# Install minimal dependencies and clean up in single layer
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends python3-pip espeak-ng && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-RUN apt-get update && apt-get install -y \
-    curl \
-    build-essential \
-    && rm -rf /var/lib/apt/lists/*
+# Create non-root user
+RUN useradd -m -u 1000 appuser
 
-RUN pip install uv 
+# Set working directory
+WORKDIR /app
 
-WORKDIR /app 
+# Copy and install requirements as root (for system-wide install)
+COPY requirements.txt .
+RUN pip3 install -r requirements.txt
 
-COPY pyproject.toml uv.lock ./  
+# Install PyTorch with CUDA support
+RUN pip3 install torch torchvision
 
-RUN uv sync  
-RUN apt-get -qq -y install espeak-ng > /dev/null 2>&1 
-RUN uv pip install torch torchvision
+# Install spaCy model
+RUN pip3 install https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.1/en_core_web_sm-3.7.1-py3-none-any.whl
 
-COPY . .  
+# Copy application code and change ownership
+COPY . .
+RUN chown -R appuser:appuser /app
 
-EXPOSE 7576 
+# Switch to non-root user
+USER appuser
 
-CMD [ "python", "./src/main.py" ] 
+# Expose port
+EXPOSE 7576
 
+# Health check
+HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=2 \
+    CMD python3 -c "import urllib.request; urllib.request.urlopen('http://localhost:7576/health', timeout=5)" || exit 1
 
+# Run application
+CMD ["python3", "./src/main.py"]

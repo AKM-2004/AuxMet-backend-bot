@@ -16,7 +16,7 @@ logger = ModuleLogger("startup")
 ## here in the origin we will need the
 # server_front_end and backend_server 2
 origins = os.getenv("BOTAPP_ORIGINS")
-if origins != "":
+if origins != "*":
     allow_origins = origins.split(",")
 else:
     allow_origins = "*"

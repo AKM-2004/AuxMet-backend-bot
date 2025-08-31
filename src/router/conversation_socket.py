@@ -20,7 +20,7 @@ else:
 logger = ModuleLogger("socket_conversation_route")
 session_users = {}
 sid_users = {}
-sio = st.AsyncServer(async_mode="asgi", cors_allowed_origins=allow_origins,cookie=True)
+sio = st.AsyncServer(async_mode="asgi", cors_allowed_origins="*",cookie=True)
 # in the tts float 32 output
 # stt can take in put of the nd array
 """ 

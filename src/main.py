@@ -14,7 +14,7 @@ load_dotenv()
 
 
 if __name__ == "__main__":
-    uvicorn.run("router.conversation_socket:sio_app",host="localhost" ,port=7576, reload=True)
+    uvicorn.run("router.conversation_socket:sio_app",host="0.0.0.0" ,port=7576,reload=True)
     print("Server is started at 7576")
     logger.INFO("Connected successfully")
 

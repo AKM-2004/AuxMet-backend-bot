@@ -11,7 +11,7 @@ class ModuleLogger:
         self.__app_name = app_name
         self.__backup = backup
 
-        os.makedirs(f"../logs/{app_name}", exist_ok=True)
+        os.makedirs(f"./logs/{app_name}", exist_ok=True)
 
         self.__logger = logging.getLogger(app_name)
         self.__logger.setLevel(logging.DEBUG)
@@ -24,7 +24,7 @@ class ModuleLogger:
 
         # INFO handler (rotated daily)
         self.__info_handler = TimedRotatingFileHandler(
-            filename=f"../logs/{app_name}/info.log",
+            filename=f"./logs/{app_name}/info.log",
             when="midnight",
             interval=1,
             backupCount=backup,
@@ -35,7 +35,7 @@ class ModuleLogger:
 
         # ERROR handler
         self.__error_handler = TimedRotatingFileHandler(
-            filename=f"../logs/{app_name}/error.log",
+            filename=f"./logs/{app_name}/error.log",
             when="midnight",
             interval=1,
             backupCount=backup,
@@ -46,7 +46,7 @@ class ModuleLogger:
 
         # DEBUG handler
         self.__debug_handler = TimedRotatingFileHandler(
-            filename=f"../logs/{app_name}/debug.log",
+            filename=f"./logs/{app_name}/debug.log",
             when="midnight",
             interval=1,
             backupCount=backup,

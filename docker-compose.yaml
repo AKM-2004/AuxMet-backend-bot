@@ -1,0 +1,42 @@
+version: "3.9"
+services:
+  app:
+    build: .
+    ports:
+      - "7576:7576"
+
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all # or specific number (e.g. 1, 2)
+              capabilities: [gpu]
+
+    environment:
+      - GROQ_API=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
+      - HUGGINGFACE_API=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
+      - LLM_MODEL=openai/gpt-oss-20b
+      - PORT=8000
+      - MONGODB_URI=mongodb+srv://adityamore49891:Auxmet2025@maincluster.iw1li1n.mongodb.net/?retryWrites=true&w=majority&appName=MainCluster
+      - ACCESS_TOKEN_SECRET=auxmet@2025
+      - ACCESS_TOKEN_EXPIRY=1d
+      - REFRESH_TOKEN_SECRET=auxmet@7575
+      - REFRESH_TOKEN_EXPIRY=10d
+      - SESSION_TOKEN=auxmet@sessionToken
+      - SESSION_TOKEN_EXPIRE=1d
+      - CLOUDINARY_CLOUD_NAME=doe5oa9aw
+      - CLOUDINARY_API_SECRET=lA4Kos3Lln5IGs0UeeXYraPWa9I
+      - CLOUDINARY_API_KEY=467267621579645
+      - ALGORITHMS=HS256
+      - BOTAPP_ORIGINS=*
+      - REDIS_URL=redis
+
+    depends_on:
+      - redis
+
+  redis:
+    image: redis:latest
+    container_name: myredis
+    ports:
+      - "6379:6379"

@@ -1,13 +1,14 @@
 from redis import Redis
 from logs import ModuleLogger
 import json
+import os 
 
 logger = ModuleLogger("redis_logs")
 
 
 def connect_to_db():
     try:
-        connection = Redis(host="localhost", port=6379, db=0, decode_responses=True)
+        connection = Redis(host= os.getenv("REDIS_URL"), port=6379, db=0, decode_responses=True)
         logger.INFO("REDIS DB IS CONNECTED SUCCESSFULLY!")
         return connection
     except Exception as e:
