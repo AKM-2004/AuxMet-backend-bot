@@ -222,3 +222,5 @@ __marimo__/
 *.mp3
 *.mp4
 *.avi
+
+docker-compose.yaml
