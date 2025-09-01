@@ -77,7 +77,7 @@ async def interview_session(
            
         }, 201)
 
-        res.set_cookie(key="sessionToken", value=token, secure=True, httponly=True,max_age=7200) 
+        res.set_cookie(key="sessionToken", value=token, secure=False, httponly=True,max_age=7200) 
         # set cookies set the cookie in the response header so it need to
 
         return res # if you want to pass the cookie you will need to return the response then only it will be actually send 
@@ -166,7 +166,7 @@ async def endSession(req: Request, res: Response, _: None = Depends(verifySessio
 
         res.delete_cookie(
             "sessionToken",           
-            secure=True,        
+            secure=False,        
             httponly=True,            
         )
         return res
