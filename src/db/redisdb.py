@@ -8,7 +8,7 @@ logger = ModuleLogger("redis_logs")
 
 def connect_to_db():
     try:
-        connection = Redis(host= os.getenv("REDIS_URL"), port=6379, db=0, decode_responses=True)
+        connection = Redis(host= os.getenv("REDIS_URL"), port=6969, db=0, decode_responses=True) # 6969 is running on the instance 
         logger.INFO("REDIS DB IS CONNECTED SUCCESSFULLY!")
         return connection
     except Exception as e:

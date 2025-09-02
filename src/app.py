@@ -57,7 +57,7 @@ app = FastAPI(lifespan=lifespan,debug=True)
 
 app.add_middleware(  ## CROS ORIGIN
     CORSMiddleware,
-    allow_origins=["http://auxmet.com","http://62.72.58.72:3000"],
+    allow_origins=["https://auxmet.com","https://62.72.58.72","https://bot.auxmet.com"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
