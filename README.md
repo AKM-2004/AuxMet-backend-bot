@@ -2,17 +2,6 @@
 
 The **Bot Backend** powers conversational AI, speech processing, and automation for [Auxmet.com](https://auxmet.com).  
 
----
-
-## 🚀 Tech Stack  
-- **FastAPI** – High-performance backend framework  
-- **Whisper-large-v3** – Speech-to-text model  
-- **Kokoro** – Speech synthesis (text-to-speech)  
-- **LangChain + LangGraph** – LLM orchestration & agent workflows  
-- **WebSockets** – Real-time communication between frontend and backend  
-
----
-
 ## 📌 Features  
 - Real-time voice & text interactions over **WebSockets**  
 - LLM-powered workflows with LangGraph  
@@ -21,5 +10,6 @@ The **Bot Backend** powers conversational AI, speech processing, and automation 
 - Streaming responses for faster, interactive conversations  
 
 ---
+
 
 
