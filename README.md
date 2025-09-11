@@ -648,30 +648,165 @@ python -m pytest tests/
 
 ## 🚀 Deployment
 
-### **Production Deployment**
+### **Production Infrastructure**
 
-#### **Frontend (Netlify/Vercel)**
+AUXMET is deployed across multiple cloud platforms for optimal performance and scalability:
+
+#### **🌐 Frontend Deployment - Hostinger VPS**
 ```bash
+# Deployed on Hostinger VPS with Nginx reverse proxy
 npm run build
-# Deploy dist/ folder
+docker build -t auxmet-frontend .
+docker run -d -p 80:3000 auxmet-frontend
 ```
 
-#### **Backend (Railway/Heroku)**
+**Infrastructure:**
+- **Platform**: Hostinger VPS
+- **Web Server**: Nginx with SSL/TLS termination
+- **Container**: Docker containerized React application
+- **CDN**: Cloudinary for static asset delivery
+
+#### **⚡ Backend API - Vast.ai Cloud Platform**
 ```bash
-# Configure environment variables
-# Deploy with Docker or direct deployment
+# Deployed on Vast.ai with high-performance computing
+docker build -t auxmet-backend .
+docker run -d -p 7575:7575 auxmet-backend
 ```
 
-#### **AI Bot (Railway/AWS)**
+**Infrastructure:**
+- **Platform**: Vast.ai Cloud Computing
+- **Runtime**: Node.js 18.x in Docker container
+- **Database**: MongoDB Atlas (cloud-hosted)
+- **Storage**: Cloudinary for file uploads and media management
+
+#### **🤖 AI Bot Service - Vast.ai with RTX 3060 GPU**
 ```bash
-# Configure Python environment
-# Deploy with Docker container
+# GPU-accelerated deployment for AI/ML workloads
+docker build -t auxmet-bot .
+docker run --gpus all -d -p 7576:7576 auxmet-bot
 ```
 
-### **Docker Deployment**
+**Infrastructure:**
+- **Platform**: Vast.ai GPU Cloud
+- **Hardware**: NVIDIA RTX 3060 GPU for ML acceleration
+- **Runtime**: Python 3.11+ with CUDA support
+- **AI Models**: Groq LLM, Faster Whisper STT, Kokoro TTS
+- **Vector DB**: Pinecone for embeddings storage
+
+### **🔄 CI/CD Pipeline - Jenkins**
+
+#### **Master-Agent Architecture**
+```yaml
+# Jenkins Pipeline Configuration
+pipeline:
+  master_node: vast.ai  # Jenkins master on Vast.ai
+  agent_nodes:
+    - hostinger_vps     # Agent for frontend deployment
+    - vast_ai_backend   # Agent for backend services
+```
+
+**Pipeline Stages:**
+1. **Source Control**: Git webhook triggers from GitHub
+2. **Build Stage**: Docker image creation on respective agents
+3. **Test Stage**: Automated testing across all services
+4. **Deploy Stage**: Rolling deployment with zero downtime
+5. **Health Check**: Post-deployment validation
+
+#### **Jenkins Configuration**
+```groovy
+pipeline {
+    agent none
+    stages {
+        stage('Frontend Build') {
+            agent { label 'hostinger-agent' }
+            steps {
+                sh 'docker build -t auxmet-frontend .'
+                sh 'docker-compose up -d frontend'
+            }
+        }
+        stage('Backend Deploy') {
+            agent { label 'vastai-agent' }
+            steps {
+                sh 'docker build -t auxmet-backend .'
+                sh 'docker-compose up -d backend'
+            }
+        }
+        stage('AI Bot Deploy') {
+            agent { label 'vastai-gpu-agent' }
+            steps {
+                sh 'docker build -t auxmet-bot .'
+                sh 'docker run --gpus all -d auxmet-bot'
+            }
+        }
+    }
+}
+```
+
+### **🐳 Docker Containerization**
+
+#### **Multi-Service Docker Compose**
+```yaml
+version: '3.8'
+services:
+  frontend:
+    build: ./auxmet-frontend
+    ports:
+      - "80:3000"
+    environment:
+      - VITE_BACKEND_URL=https://api.auxmet.com
+      - VITE_BOTBACKENDURL=https://bot.auxmet.com
+    
+  backend:
+    build: ./auxmet-backend
+    ports:
+      - "7575:7575"
+    environment:
+      - MONGODB_URI=${MONGODB_URI}
+      - CLOUDINARY_URL=${CLOUDINARY_URL}
+    
+  ai-bot:
+    build: ./auxmet-bot
+    ports:
+      - "7576:7576"
+    runtime: nvidia
+    environment:
+      - GROQ_API=${GROQ_API}
+      - CUDA_VISIBLE_DEVICES=0
+```
+
+### **☁️ Cloud Services Integration**
+
+#### **Cloudinary CDN**
+- **Media Storage**: Resume uploads, profile images
+- **Image Optimization**: Automatic compression and format conversion
+- **Global CDN**: Fast content delivery worldwide
+
+#### **MongoDB Atlas**
+- **Database Hosting**: Fully managed MongoDB clusters
+- **Global Clusters**: Multi-region deployment for low latency
+- **Automatic Backups**: Point-in-time recovery
+
+### **🔧 Deployment Commands**
+
 ```bash
-# Build and run with Docker Compose
-docker-compose up -d
+# Complete deployment script
+#!/bin/bash
+
+# Frontend deployment on Hostinger VPS
+ssh hostinger-vps "cd /var/www/auxmet && git pull && docker-compose up -d frontend"
+
+# Backend deployment on Vast.ai
+ssh vastai-backend "cd /app/auxmet && git pull && docker-compose up -d backend"
+
+# AI Bot deployment on Vast.ai GPU
+ssh vastai-gpu "cd /app/auxmet && git pull && docker-compose up -d ai-bot"
+
+# Health checks
+curl -f https://auxmet.com/health || exit 1
+curl -f https://api.auxmet.com/health || exit 1
+curl -f https://bot.auxmet.com/health || exit 1
+
+echo "✅ Deployment completed successfully!"
 ```
 
 ---
