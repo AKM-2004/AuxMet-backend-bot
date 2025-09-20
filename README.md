@@ -32,6 +32,7 @@
 - [🎯 Usage Guide](#-usage-guide)
 - [🔄 Data Flow](#-data-flow)
 - [🧪 Testing](#-testing)
+- [🚀 Deployment](#-deployment)
 - [🤝 Contributing](#-contributing)
 - [📄 License](#-license)
 
@@ -44,39 +45,42 @@ AUXMET is an enterprise-grade AI interview platform that transforms traditional 
 ## 📸 Application Screenshots
 
 ### 🏠 **Landing Page**
-![AUXMET Landing Page](./images/Screenshot%202025-09-08%20223915.png)
+![AUXMET Landing Page](https://res.cloudinary.com/doe5oa9aw/image/upload/v1757928691/Screenshot_2025-09-08_223915_nw7l8m.png)
 *Modern landing page with futuristic design and clear call-to-action*
 
 ### 🚪 **Login Interface**
-![Login Page](./images/Screenshot%202025-09-08%20223934.png)
+![Login Page](https://res.cloudinary.com/doe5oa9aw/image/upload/v1757928686/Screenshot_2025-09-08_223934_dfdgrt.png)
 *Secure authentication with Google OAuth integration*
 
 ### 🎯 **Dashboard**
-![Dashboard](./images/Screenshot%202025-09-08%20223646.png)
+![Dashboard](https://res.cloudinary.com/doe5oa9aw/image/upload/v1757928689/Screenshot_2025-09-08_223646_wahmdk.png)
 *Clean dashboard interface with AI-powered interview initiation*
 
 ### 📋 **Interview Setup**
-![Interview Preparation](./images/Screenshot%202025-09-08%20223717.png)
+![Interview Preparation](https://res.cloudinary.com/doe5oa9aw/image/upload/v1757928692/Screenshot_2025-09-08_223717_wbr5y6.png)
 *Comprehensive interview preparation portal with resume upload and session configuration*
 
+### 📋 **Interview page**
+![Interview Page](https://res.cloudinary.com/doe5oa9aw/image/upload/v1758390021/Screenshot_2025-09-20_230845_xzo7bj.png)
+
 ### 📊 **Performance Analytics**
-![Performance Results](./images/Screenshot%202025-09-08%20223757.png)
+![Performance Results](https://res.cloudinary.com/doe5oa9aw/image/upload/v1757928690/Screenshot_2025-09-08_223757_wpmyso.png)
 *Multi-dimensional scoring system with detailed performance metrics*
 
 ### 📈 **Domain Analysis**
-![Domain Performance](./images/Screenshot%202025-09-08%20223817.png)
+![Domain Performance](https://res.cloudinary.com/doe5oa9aw/image/upload/v1757928690/Screenshot_2025-09-08_223817_lb0aku.png)
 *Domain-specific performance tracking and analytics*
 
 ### 📚 **Reference Materials**
-![Learning Resources](./images/Screenshot%202025-09-08%20223837.png)
+![Learning Resources](https://res.cloudinary.com/doe5oa9aw/image/upload/v1757928690/Screenshot_2025-09-08_223837_h21h1c.png)
 *AI-generated reference links and learning materials for improvement*
 
 ### 📋 **Interview History**
-![Interview History](./images/Screenshot%202025-09-08%20223736.png)
+![Interview History](https://res.cloudinary.com/doe5oa9aw/image/upload/v1757928691/Screenshot_2025-09-08_223736_jmkggt.png)
 *Complete history of practice sessions with performance tracking*
 
 ### 👤 **User Profile**
-![User Profile](./images/Screenshot%202025-09-08%20223858.png)
+![User Profile](https://res.cloudinary.com/doe5oa9aw/image/upload/v1757928691/Screenshot_2025-09-08_223858_nhd9in.png)
 *Comprehensive user profile management with statistics*
 
 ### 🎯 Problem Statement
@@ -644,6 +648,34 @@ python -m pytest tests/
 ```
 
 ---
+
+## 🚀 Deployment
+
+### **Production Deployment**
+
+#### **Frontend (Netlify/Vercel)**
+```bash
+npm run build
+# Deploy dist/ folder
+```
+
+#### **Backend (Railway/Heroku)**
+```bash
+# Configure environment variables
+# Deploy with Docker or direct deployment
+```
+
+#### **AI Bot (Railway/AWS)**
+```bash
+# Configure Python environment
+# Deploy with Docker container
+```
+
+### **Docker Deployment**
+```bash
+# Build and run with Docker Compose
+docker-compose up -d
+```
 
 ---
 
