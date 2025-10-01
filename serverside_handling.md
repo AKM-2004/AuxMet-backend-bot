@@ -1,6 +1,6 @@
 sudo nano /etc/systemd/system/whisper-app.service
 
------ whole thing inside this file 
+----- whole thing inside this file
 [Unit]
 Description=Whisper Application
 After=network.target
@@ -17,31 +17,30 @@ Environment=LD_LIBRARY_PATH=/root/AuxMet-backend-bot/AuxMet-backend-bot/.venv/li
 [Install]
 WantedBy=multi-user.target
 
----- end of the file 
+---- end of the file
 
 sudo systemctl daemon-reload
-sudo systemctl enable whisper-app   # this commands are to start the Application 
+sudo systemctl enable whisper-app # this commands are to start the Application
 sudo systemctl start whisper-app
 
-
--- commands to control the server 
+-- commands to control the server
 
 # Check status
+
 sudo systemctl status whisper-app
 
 # View logs
+
 sudo journalctl -u whisper-app -f
 
 # Stop service
+
 sudo systemctl stop whisper-app
 
 # Restart service
+
 sudo systemctl restart whisper-app
 
 # Disable auto-start on boot
+
 sudo systemctl disable whisper-app
-
-
-
-
-
