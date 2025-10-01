@@ -224,3 +224,5 @@ __marimo__/
 *.avi
 
 ./docker-compose.yaml
+
+./serverside running with systemd
