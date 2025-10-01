@@ -51,8 +51,9 @@ class redis_db:
             raise ValueError("sesionId is required")
         session_ID = "message" + str(session_id)
         try:
-            list = self.r.lrange(session_ID, 0, -1)
-            return list
+            vals = self.r.lrange(session_ID, 0, -1)
+            lists = [v.decode() for v in vals] # this will decode the byte into the string becasuse when we add dict it automatically converts into the string and when we want the ouput in properformat so we will use the this 
+            return lists
         except Exception as e:
             raise e
 
